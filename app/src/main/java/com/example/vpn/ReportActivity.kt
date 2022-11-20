@@ -26,6 +26,9 @@ class ReportActivity:BaseActivity<ActivityReportBinding>() {
                 }
             }
         }
+        mBinding.imageView.setOnClickListener {
+            onBackPressed()
+        }
         if (!intent.getBooleanExtra("isSuccess",false)) {
             LogUtils.d(VPN.connectionInfo)
             VPN.connectionInfo.let {

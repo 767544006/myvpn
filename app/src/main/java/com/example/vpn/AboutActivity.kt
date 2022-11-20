@@ -7,7 +7,9 @@ import com.example.vpn.databinding.ActivityMainBinding
 
 class AboutActivity:BaseActivity<ActivityAboutBinding>() {
     override fun initView(savedInstanceState: Bundle?) {
-
+        mBinding.imageView.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     override fun initData() {

@@ -22,6 +22,9 @@ class HistoryActivity:BaseActivity<ActivityHistoryBinding>() {
     }
     override fun initView(savedInstanceState: Bundle?) {
         mBinding.recycleview.adapter=adapter
+        mBinding.imageView.setOnClickListener {
+            onBackPressed()
+        }
     }
 
     override fun initData() {

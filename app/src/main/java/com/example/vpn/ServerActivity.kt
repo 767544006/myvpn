@@ -15,6 +15,9 @@ class ServerActivity:BaseActivity<ActivityServerBinding>() {
     }
     override fun initView(savedInstanceState: Bundle?) {
         vpsAdapter.data= App.data
+        mBinding.imageView.setOnClickListener {
+            onBackPressed()
+        }
         mBinding.recycleview.adapter=vpsAdapter
         mBinding.textView2.text=VpsFactory.fastVps.value?.vpsname
         assets.open("${VpsFactory.fastVps.value?.local}.webp").use {

@@ -19,6 +19,9 @@ class LocationActivity : BaseActivity<ActivityLocationBinding>() {
         mBinding.map.settings.apply {
             javaScriptEnabled = true
         }
+        mBinding.imageView.setOnClickListener {
+            onBackPressed()
+        }
         lifecycleScope.launch(Dispatchers.IO) {
             okHttpGet("https://ipapi.co/json")
         }
