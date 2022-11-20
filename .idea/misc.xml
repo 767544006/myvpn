@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/drawable/confirm.xml" value="0.1875" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/drawable/ic_flag_us.xml" value="0.1885" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_about.xml" value="0.22" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_history.xml" value="0.18020833333333333" />
@@ -10,7 +11,7 @@
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_main.xml" value="0.2807971014492754" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_report.xml" value="0.2807971014492754" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_server.xml" value="0.18020833333333333" />
-        <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_start.xml" value="0.2807971014492754" />
+        <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_start.xml" value="0.22" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/activity_web.xml" value="0.2807971014492754" />
         <entry key="..\:/AndroidWorkSpace/Vpn/app/src/main/res/layout/item_server.xml" value="0.18020833333333333" />
       </map>
