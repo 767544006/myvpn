@@ -10,8 +10,10 @@ import com.blankj.utilcode.util.SPStaticUtils
 import com.blankj.utilcode.util.SpanUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.example.VpsFactory
+import com.example.ad.AdFactory
 import com.example.vpn.databinding.ActivityStartBinding
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 class StartActivity : BaseActivity<ActivityStartBinding>() {
     var isCheck=true
@@ -58,13 +60,19 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     }
 
     private fun start() {
+        lifecycleScope.launch {
+            AdFactory.loadAll(this@StartActivity)
+        }
         SPStaticUtils.put("isFirst",false)
         mBinding.group.visibility = View.GONE
         lifecycleScope.launchWhenCreated {
-            delay(2000)
+            delay(5000)
             VpsFactory.initVps()
-            startActivity(Intent(this@StartActivity, MainActivity::class.java))
-            finish()
+            AdFactory.show(this@StartActivity,"start","start",null){
+                startActivity(Intent(this@StartActivity, MainActivity::class.java))
+                finish()
+            }
+
         }
     }
 

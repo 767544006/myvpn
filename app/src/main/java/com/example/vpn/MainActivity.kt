@@ -16,6 +16,7 @@ import com.chad.library.adapter.base.viewholder.BaseViewHolder
 import com.example.App
 import com.example.AppBaseDatabase
 import com.example.VpsFactory
+import com.example.ad.AdFactory
 import com.example.bean.DrawBean
 import com.example.openvpn.core.ConnectionStatus
 import com.example.openvpn.core.VpnStatus
@@ -88,7 +89,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), VpnStatus.StateListene
             }
         }
         mBinding.constraintLayout4.setOnClickListener {
-            startActivity(Intent(this,HistoryActivity::class.java))
+            lifecycleScope.launch {
+                AdFactory.show(this@MainActivity,"int","finish",null){
+                    startActivity(Intent(this@MainActivity, HistoryActivity::class.java))
+                }
+            }
         }
         mBinding.constraintLayout2.setOnClickListener {
             val intent = Intent(this, ServerActivity::class.java)
@@ -96,7 +101,11 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), VpnStatus.StateListene
         }
 
         mBinding.location.setOnClickListener {
-            startActivity(Intent(this, LocationActivity::class.java))
+            lifecycleScope.launch {
+                AdFactory.show(this@MainActivity,"int","finish",null){
+                    startActivity(Intent(this@MainActivity, LocationActivity::class.java))
+                }
+            }
         }
         mBinding.imageView7.setOnClickListener {
             toggle()
@@ -203,11 +212,15 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), VpnStatus.StateListene
         mBinding.imageView7.setImageResource(R.drawable.ic_connected)
         mBinding.wave.stop()
         mBinding.wave.visibility=View.GONE
-        startActivity(Intent(this, ReportActivity::class.java).apply {
-            putExtra("isSuccess",true)
-            putExtra("country","US")
+        lifecycleScope.launch {
+            AdFactory.show(this@MainActivity,"int","finish",null){
+                startActivity(Intent(this@MainActivity, ReportActivity::class.java).apply {
+                    putExtra("isSuccess", true)
+                    putExtra("country", "US")
+                })
+            }
+        }
 
-        })
     }
 
     fun disconnect() {
@@ -216,10 +229,17 @@ class MainActivity : BaseActivity<ActivityMainBinding>(), VpnStatus.StateListene
             mBinding.wave.stop()
             mBinding.wave.visibility = View.GONE
             mBinding.imageView7.setImageResource(R.drawable.ic_no_connect)
-            startActivity(Intent(this, ReportActivity::class.java).apply {
-                putExtra("isSuccess", false)
-                putExtra("country", "US")
-            })
+
+
+            lifecycleScope.launch {
+                AdFactory.show(this@MainActivity,"int","finish",null){
+                    startActivity(Intent(this@MainActivity, ReportActivity::class.java).apply {
+                        putExtra("isSuccess", false)
+                        putExtra("country", "US")
+                    })
+                }
+            }
+
         }
     }
 

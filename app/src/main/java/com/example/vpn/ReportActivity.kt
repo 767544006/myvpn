@@ -8,6 +8,7 @@ import com.blankj.utilcode.util.LogUtils
 import com.example.App
 import com.example.AppBaseDatabase
 import com.example.VpsFactory
+import com.example.ad.AdFactory
 import com.example.bean.HistoryBean
 import com.example.openvpn.extal.VPN
 import com.example.vpn.databinding.ActivityReportBinding
@@ -44,6 +45,12 @@ class ReportActivity:BaseActivity<ActivityReportBinding>() {
         }
     }
 
+    override fun onStart() {
+        super.onStart()
+        lifecycleScope.launch {
+            AdFactory.show(this@ReportActivity,"nav","report",mBinding.adContainer)
+        }
+    }
     override fun initData() {
 
     }

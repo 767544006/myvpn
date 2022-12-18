@@ -136,4 +136,12 @@
         android:textSize="21sp"
         app:layout_constraintStart_toStartOf="@+id/textView13"
         app:layout_constraintTop_toTopOf="@+id/textView11" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/adContainer"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="15dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

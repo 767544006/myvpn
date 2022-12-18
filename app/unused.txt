@@ -1804,8 +1804,6 @@ com.blankj.utilcode.util.SPStaticUtils:
     public static float getFloat(java.lang.String,float,com.blankj.utilcode.util.SPUtils)
     public static float getFloat(java.lang.String,com.blankj.utilcode.util.SPUtils)
     public static int getInt(java.lang.String)
-    public static int getInt(java.lang.String,int)
-    public static int getInt(java.lang.String,int,com.blankj.utilcode.util.SPUtils)
     public static int getInt(java.lang.String,com.blankj.utilcode.util.SPUtils)
     public static long getLong(java.lang.String)
     public static long getLong(java.lang.String,long)
@@ -1823,8 +1821,6 @@ com.blankj.utilcode.util.SPStaticUtils:
     public static void put(java.lang.String,float,com.blankj.utilcode.util.SPUtils)
     public static void put(java.lang.String,float,boolean)
     public static void put(java.lang.String,float,boolean,com.blankj.utilcode.util.SPUtils)
-    public static void put(java.lang.String,int)
-    public static void put(java.lang.String,int,com.blankj.utilcode.util.SPUtils)
     public static void put(java.lang.String,int,boolean)
     public static void put(java.lang.String,int,boolean,com.blankj.utilcode.util.SPUtils)
     public static void put(java.lang.String,long)
@@ -1839,8 +1835,6 @@ com.blankj.utilcode.util.SPStaticUtils:
     public static void put(java.lang.String,java.util.Set,com.blankj.utilcode.util.SPUtils)
     public static void put(java.lang.String,java.util.Set,boolean)
     public static void put(java.lang.String,java.util.Set,boolean,com.blankj.utilcode.util.SPUtils)
-    public static void put(java.lang.String,boolean)
-    public static void put(java.lang.String,boolean,com.blankj.utilcode.util.SPUtils)
     public static void put(java.lang.String,boolean,boolean)
     public static void put(java.lang.String,boolean,boolean,com.blankj.utilcode.util.SPUtils)
     public static void remove(java.lang.String)
@@ -1859,23 +1853,18 @@ com.blankj.utilcode.util.SPUtils:
     public float getFloat(java.lang.String,float)
     public static com.blankj.utilcode.util.SPUtils getInstance(int)
     public int getInt(java.lang.String)
-    public int getInt(java.lang.String,int)
     public long getLong(java.lang.String)
     public long getLong(java.lang.String,long)
     public java.util.Set getStringSet(java.lang.String)
     public java.util.Set getStringSet(java.lang.String,java.util.Set)
     public void put(java.lang.String,float)
     public void put(java.lang.String,float,boolean)
-    public void put(java.lang.String,int)
-    public void put(java.lang.String,int,boolean)
     public void put(java.lang.String,long)
     public void put(java.lang.String,long,boolean)
     public void put(java.lang.String,java.lang.String)
     public void put(java.lang.String,java.lang.String,boolean)
     public void put(java.lang.String,java.util.Set)
     public void put(java.lang.String,java.util.Set,boolean)
-    public void put(java.lang.String,boolean)
-    public void put(java.lang.String,boolean,boolean)
 com.blankj.utilcode.util.ScreenUtils:
     private void <init>()
     public int calculateDistanceByX(android.view.View)
@@ -2736,8 +2725,42 @@ com.example.App:
     public static final synthetic void access$setData$cp(java.util.List)
     public static final synthetic void access$setHistory$cp(androidx.lifecycle.MutableLiveData)
     public static final synthetic void access$setLocalBean$cp(androidx.lifecycle.MutableLiveData)
+    public final java.lang.String getStr()
 com.example.Data:
     public final void setVps(java.lang.String)
+com.example.ad.AdBean:
+    public final java.lang.String component1()
+    public final java.lang.String component2()
+    public final java.lang.String component3()
+    public final com.example.ad.AdBean copy(java.lang.String,java.lang.String,java.lang.String)
+    public static synthetic com.example.ad.AdBean copy$default(com.example.ad.AdBean,java.lang.String,java.lang.String,java.lang.String,int,java.lang.Object)
+com.example.ad.AdParent$DefaultImpls:
+    public static synthetic java.lang.Object showAd$default(com.example.ad.AdParent,java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation,int,java.lang.Object)
+com.example.ad.AdParent$showAd$1
+com.example.ad.AdParent:
+    public abstract java.lang.Object showAd(java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation)
+com.example.ad.AdResult:
+    public final java.lang.String component1()
+    public final java.lang.String component2()
+    public final java.lang.String component3()
+    public final java.lang.Object component4()
+    public final com.example.ad.AdResult copy(java.lang.String,java.lang.String,java.lang.String,java.lang.Object)
+    public static synthetic com.example.ad.AdResult copy$default(com.example.ad.AdResult,java.lang.String,java.lang.String,java.lang.String,java.lang.Object,int,java.lang.Object)
+    public final java.lang.Object getAd()
+    public final java.lang.String getId()
+    public final java.lang.String getLoc()
+    public final java.lang.String getType()
+com.example.ad.AdmobBan:
+    public java.lang.Object showAd(java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation)
+com.example.ad.AdmobNative:
+    public final void bindAdView(com.google.android.gms.ads.nativead.NativeAd,com.google.android.gms.ads.nativead.NativeAdView)
+    public java.lang.Object showAd(java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation)
+com.example.ad.AdmobOpen$showAd$2
+com.example.ad.AdmobOpen:
+    public java.lang.Object showAd(java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation)
+com.example.m156.ad.AdmobInsert$showAd$2
+com.example.m156.ad.AdmobInsert:
+    public java.lang.Object showAd(java.lang.Object,android.app.Activity,android.view.ViewGroup,kotlin.jvm.functions.Function0,kotlin.coroutines.Continuation)
 com.example.vpn.BR
 com.example.vpn.BuildConfig
 com.example.vpn.DataBinderMapperImpl$InnerBrLookup:
@@ -7553,13 +7576,11 @@ kotlinx.coroutines.DefaultExecutor:
 kotlinx.coroutines.Deferred$DefaultImpls
 kotlinx.coroutines.Deferred:
     public abstract java.lang.Object await(kotlin.coroutines.Continuation)
-    public abstract java.lang.Object getCompleted()
     public abstract java.lang.Throwable getCompletionExceptionOrNull()
     public abstract kotlinx.coroutines.selects.SelectClause1 getOnAwait()
 kotlinx.coroutines.DeferredCoroutine:
     public java.lang.Object await(kotlin.coroutines.Continuation)
     static synthetic java.lang.Object await$suspendImpl(kotlinx.coroutines.DeferredCoroutine,kotlin.coroutines.Continuation)
-    public java.lang.Object getCompleted()
     public kotlinx.coroutines.selects.SelectClause1 getOnAwait()
     public void registerSelectClause1(kotlinx.coroutines.selects.SelectInstance,kotlin.jvm.functions.Function2)
 kotlinx.coroutines.Delay$DefaultImpls
@@ -7647,7 +7668,6 @@ kotlinx.coroutines.Job:
     public abstract kotlin.sequences.Sequence getChildren()
     public abstract kotlinx.coroutines.selects.SelectClause0 getOnJoin()
     public abstract kotlinx.coroutines.DisposableHandle invokeOnCompletion(kotlin.jvm.functions.Function1)
-    public abstract java.lang.Object join(kotlin.coroutines.Continuation)
     public abstract kotlinx.coroutines.Job plus(kotlinx.coroutines.Job)
 kotlinx.coroutines.JobImpl:
     public boolean complete()
@@ -7710,16 +7730,12 @@ kotlinx.coroutines.JobSupport:
     public final kotlinx.coroutines.JobCancellationException defaultCancellationException$kotlinx_coroutines_core(java.lang.String,java.lang.Throwable)
     public static synthetic kotlinx.coroutines.JobCancellationException defaultCancellationException$kotlinx_coroutines_core$default(kotlinx.coroutines.JobSupport,java.lang.String,java.lang.Throwable,int,java.lang.Object)
     public final kotlin.sequences.Sequence getChildren()
-    public final java.lang.Object getCompletedInternal$kotlinx_coroutines_core()
     protected final java.lang.Throwable getCompletionCause()
     protected final boolean getCompletionCauseHandled()
     public final java.lang.Throwable getCompletionExceptionOrNull()
     public final kotlinx.coroutines.selects.SelectClause0 getOnJoin()
     private final boolean isCancelling(kotlinx.coroutines.Incomplete)
     public final boolean isCompletedExceptionally()
-    public final java.lang.Object join(kotlin.coroutines.Continuation)
-    private final boolean joinInternal()
-    private final java.lang.Object joinSuspend(kotlin.coroutines.Continuation)
     private final java.lang.Void loopOnState(kotlin.jvm.functions.Function1)
     public final boolean makeCompleting$kotlinx_coroutines_core(java.lang.Object)
     private final synthetic void notifyHandlers(kotlinx.coroutines.NodeList,java.lang.Throwable)
@@ -7742,7 +7758,6 @@ kotlinx.coroutines.NonCancellable
 kotlinx.coroutines.ObsoleteCoroutinesApi
 kotlinx.coroutines.ParentJob$DefaultImpls
 kotlinx.coroutines.ResumeAwaitOnCompletion
-kotlinx.coroutines.ResumeOnCompletion
 kotlinx.coroutines.RunnableKt$Runnable$1
 kotlinx.coroutines.RunnableKt
 kotlinx.coroutines.SchedulerTaskKt
@@ -11080,6 +11095,11 @@ androidx.window.embedding.EmbeddingAdapter$$InternalSyntheticLambda$0$9a38556e09
 androidx.window.embedding.EmbeddingAdapter$$InternalSyntheticLambda$0$fd1a730e5b7264b9028d9f971be13fef260300e492ca4da6ebf6b772237369a1$0
 androidx.window.embedding.ExtensionEmbeddingBackend$SplitListenerWrapper$$InternalSyntheticLambda$0$185c1ab82e66811f01c2caa4cdb93f72db854ddebb21d8ef1c846664ffbdef52$0
 androidx.window.layout.SidecarWindowBackend$WindowLayoutChangeCallbackWrapper$$InternalSyntheticLambda$0$5b297a89a87dc75c426200de0eed5984b5587cef241f854e8c1c129f35b724d6$0
+androidx.work.Logger:
+    public static void <clinit>()
+androidx.work.impl.utils.futures.AbstractFuture$SafeAtomicHelper$$InternalSyntheticBackportWithForwarding$0$6d1cb63ffb0ced1845b531aab3fdf393a481ea5ad89de4d526b7044868c71e65$0
+androidx.work.impl.utils.futures.AbstractFuture$SafeAtomicHelper$$InternalSyntheticBackportWithForwarding$0$93c70bd36a267f855b7d22165d9e6c352b6b7ebd184be7918874a2dee92368c2$0
+androidx.work.impl.utils.futures.AbstractFuture$SafeAtomicHelper$$InternalSyntheticBackportWithForwarding$0$bee83b91c163ab77d00633f3cfa94e2ebae70cb3b6063f6ec561fc99621395a2$0
 coil.Coil:
     public static coil.ImageLoaderFactory imageLoaderFactory
     public final synchronized coil.ImageLoader newImageLoader(android.content.Context)
@@ -11896,11 +11916,18 @@ com.blankj.utilcode.util.RomUtils$RomInfo:
     public static synthetic java.lang.String access$002(com.blankj.utilcode.util.RomUtils$RomInfo,java.lang.String)
     public static synthetic java.lang.String access$102(com.blankj.utilcode.util.RomUtils$RomInfo,java.lang.String)
 com.blankj.utilcode.util.SDCardUtils
-com.blankj.utilcode.util.SPStaticUtils
+com.blankj.utilcode.util.SPStaticUtils:
+    public static com.blankj.utilcode.util.SPUtils sDefaultSPUtils
+    public static int getInt(java.lang.String,int)
 com.blankj.utilcode.util.SPUtils:
     public final boolean getBoolean(java.lang.String,boolean)
+    public final int getInt(java.lang.String,int)
     public final java.lang.String getString(java.lang.String)
     public final java.lang.String getString(java.lang.String,java.lang.String)
+    public final void put(java.lang.String,int)
+    public final void put(java.lang.String,int,boolean)
+    public final void put(java.lang.String,boolean)
+    public final void put(java.lang.String,boolean,boolean)
     public final void remove(java.lang.String)
     public final void remove(java.lang.String,boolean)
 com.blankj.utilcode.util.ScreenUtils
@@ -12282,6 +12309,9 @@ com.example.App$Companion:
 com.example.App$onCreate$1:
     public int label
     public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
+com.example.App:
+    public static synthetic void $r8$lambda$pLvhLjvSD09ruFzCbey3g2K-Bls(com.google.android.gms.ads.initialization.InitializationStatus)
+    public static final void onCreate$lambda-0(com.google.android.gms.ads.initialization.InitializationStatus)
 com.example.AppBaseDatabase$AppBaseDatabaseHolder:
     public final com.example.AppBaseDatabase getInstance()
 com.example.AppBaseDatabase$Companion
@@ -12302,10 +12332,55 @@ com.example.VpsFactory:
     public static final androidx.lifecycle.MutableLiveData getCurrentVps()
     public static final androidx.lifecycle.MutableLiveData getFastVps()
     public static final void initVps()
+com.example.ad.AdBean:
+    public final java.lang.String getId()
+    public final java.lang.String getLoc()
+    public final java.lang.String getType()
+com.example.ad.AdFactory$loadAll$2$1$1$job$1:
+    public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
+com.example.ad.AdFactory$loadAll$2$1$1:
+    public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
+com.example.ad.AdFactory$loadAll$2:
+    public int label
+    public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
+com.example.ad.AdFactory:
+    public final java.lang.Object loadAll(android.content.Context,kotlin.coroutines.Continuation)
+    public final com.example.ad.AdParent produceAdParent(java.lang.String)
+com.example.ad.AdParent$DefaultImpls
+com.example.ad.AdParent$loadAd$1
+com.example.ad.AdmobBan$loadAd$2$1$onAdFailedToLoad$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobBan$loadAd$2$1$onAdLoaded$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobBan:
+    public final java.lang.String type
+    public final com.google.android.gms.ads.AdSize getAdSize(android.content.Context)
+com.example.ad.AdmobNative$loadAd$2$adLoader$1$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobNative$loadAd$2$adLoader$2$onAdFailedToLoad$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobNative:
+    public final java.lang.String type
+com.example.ad.AdmobOpen$loadAd$2$1$onAdFailedToLoad$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobOpen$loadAd$2$1$onAdLoaded$1:
+    public final void invoke(java.lang.Throwable)
+com.example.ad.AdmobOpen$loadAd$2$1:
+    public final void onAdLoaded(com.google.android.gms.ads.appopen.AppOpenAd)
+com.example.ad.AdmobOpen:
+    public final java.lang.String type
 com.example.adapter.MultipleItemQuickAdapter:
     public final void convert(com.chad.library.adapter.base.viewholder.BaseViewHolder,com.chad.library.adapter.base.entity.MultiItemEntity)
 com.example.adapter.VpsAdapter:
     public final void convert(com.chad.library.adapter.base.viewholder.BaseViewHolder,com.example.bean.VpsBeanItem)
+com.example.m156.ad.AdmobInsert$loadAd$2$1$onAdFailedToLoad$1:
+    public final void invoke(java.lang.Throwable)
+com.example.m156.ad.AdmobInsert$loadAd$2$1$onAdLoaded$1:
+    public final void invoke(java.lang.Throwable)
+com.example.m156.ad.AdmobInsert$loadAd$2$1:
+    public final void onAdLoaded(com.google.android.gms.ads.interstitial.InterstitialAd)
+com.example.m156.ad.AdmobInsert:
+    public final java.lang.String type
 com.example.openvpn.VpnProfile$$InternalSyntheticLambda$0$337098e58af4f5081a28ca1d8337d3f025b0df5b3b53bb237555e5a6c12aa646$0
 com.example.openvpn.VpnProfile:
     public static void <clinit>()
@@ -12383,8 +12458,20 @@ com.example.vpn.ServerActivity$vpsAdapter$2:
 com.example.vpn.StartActivity$$InternalSyntheticLambda$0$34e7c36f7db3a155e5ddef44bb509555865cfbc97b8af94b0ba25197e30003c6$1
 com.example.vpn.StartActivity$start$1:
     public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
+com.example.vpn.StartActivity$start$2:
+    public final java.lang.Object invoke(kotlinx.coroutines.CoroutineScope,kotlin.coroutines.Continuation)
 com.example.vpn.StartActivity:
     public final void makeSpan()
+com.google.android.gms.common.util.AndroidUtilsLight:
+    public static void <clinit>()
+com.google.android.gms.common.util.ProcessUtils:
+    public static void <clinit>()
+com.google.android.gms.internal.ads_identifier.zzb:
+    static void <clinit>()
+com.google.android.gms.internal.measurement.zzag:
+    public static void <clinit>()
+com.google.android.gms.internal.measurement.zzc:
+    static void <clinit>()
 com.google.android.material.color.ColorResourcesLoaderCreator:
     public static void <clinit>()
 com.google.android.material.color.HarmonizedColors:
@@ -12655,6 +12742,7 @@ kotlin.math.MathKt__MathJVMKt:
     public static final int coerceAtMost(int,int)
     public static final long coerceAtMost(long,long)
     public static final int digitOf(char,int)
+    public static final void disposeOnCancellation(kotlinx.coroutines.CancellableContinuation,kotlinx.coroutines.DisposableHandle)
     public static final void ensureActive(kotlinx.coroutines.Job)
     public static final void ensureActive(kotlinx.coroutines.flow.FlowCollector)
     public static final kotlinx.coroutines.flow.Flow flow(kotlin.jvm.functions.Function2)
@@ -12791,8 +12879,6 @@ kotlinx.coroutines.AbstractTimeSourceKt
 kotlinx.coroutines.BuildersKt
 kotlinx.coroutines.BuildersKt__Builders_commonKt
 kotlinx.coroutines.CancellableContinuation$DefaultImpls
-kotlinx.coroutines.CancellableContinuation:
-    public abstract void resume(java.lang.Object,kotlin.jvm.functions.Function1)
 kotlinx.coroutines.CancellableContinuationImpl$$InternalSyntheticBackportWithForwarding$0$14938e86c53bbc417d960c3db093d9c528eee461fa47b6759be891f884702045$0
 kotlinx.coroutines.CancellableContinuationImpl$$InternalSyntheticBackportWithForwarding$0$15d2f27ee968b571c407d900c451619b2856161579bee0f0f7f4bb203251bcaa$0
 kotlinx.coroutines.CancellableContinuationImpl$$InternalSyntheticBackportWithForwarding$0$15d2f27ee968b571c407d900c451619b2856161579bee0f0f7f4bb203251bcaa$1
@@ -12931,7 +13017,7 @@ kotlinx.coroutines.Job$DefaultImpls:
 kotlinx.coroutines.Job:
     public static final kotlinx.coroutines.Job$Key Key
     static void <clinit>()
-    public abstract boolean isCompleted()
+    public abstract java.lang.Object join(kotlin.coroutines.Continuation)
 kotlinx.coroutines.JobImpl:
     public final boolean handlesException()
 kotlinx.coroutines.JobKt
@@ -12963,9 +13049,12 @@ kotlinx.coroutines.JobSupport:
     public final java.lang.Object cancelMakeCompleting(java.lang.Object)
     public final void continueCompleting(kotlinx.coroutines.JobSupport$Finishing,kotlinx.coroutines.ChildHandleNode,java.lang.Object)
     public final kotlinx.coroutines.ChildHandleNode firstChild(kotlinx.coroutines.Incomplete)
+    public final java.lang.Object getCompletedInternal$kotlinx_coroutines_core()
     public final java.lang.Throwable getExceptionOrNull(java.lang.Object)
     public final kotlinx.coroutines.DisposableHandle invokeOnCompletion(kotlin.jvm.functions.Function1)
-    public final boolean isCompleted()
+    public final java.lang.Object join(kotlin.coroutines.Continuation)
+    public final boolean joinInternal()
+    public final java.lang.Object joinSuspend(kotlin.coroutines.Continuation)
     public final java.lang.Object makeCancelling(java.lang.Object)
     public final kotlinx.coroutines.JobNode makeNode(kotlin.jvm.functions.Function1,boolean)
     public final void notifyCompletion(kotlinx.coroutines.NodeList,java.lang.Throwable)
@@ -12973,7 +13062,6 @@ kotlinx.coroutines.JobSupport:
     public final void promoteEmptyToNodeList(kotlinx.coroutines.Empty)
     public final void removeNode$kotlinx_coroutines_core(kotlinx.coroutines.JobNode)
     public final void setParentHandle$kotlinx_coroutines_core(kotlinx.coroutines.ChildHandle)
-    public final int startInternal(java.lang.Object)
     public static synthetic java.util.concurrent.CancellationException toCancellationException$default(kotlinx.coroutines.JobSupport,java.lang.Throwable,java.lang.String,int,java.lang.Object)
     public final java.lang.String toDebugString()
     public final boolean tryFinalizeSimpleState(kotlinx.coroutines.Incomplete,java.lang.Object)
@@ -12987,9 +13075,9 @@ kotlinx.coroutines.JobSupportKt:
     public static final synthetic void access$getSEALED$p()
     public static final synthetic void access$getTOO_LATE_TO_CANCEL$p()
     public static final java.lang.Object boxIncomplete(java.lang.Object)
-    public static final java.lang.Object unboxState(java.lang.Object)
 kotlinx.coroutines.NodeList:
     public final java.lang.String getString(java.lang.String)
+kotlinx.coroutines.ResumeOnCompletion
 kotlinx.coroutines.SupervisorKt
 kotlinx.coroutines.ThreadLocalEventLoop:
     public static final void resetEventLoop$kotlinx_coroutines_core()

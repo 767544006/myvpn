@@ -7,6 +7,7 @@ import android.webkit.WebViewClient
 import androidx.lifecycle.lifecycleScope
 import com.aleyn.mvvm.base.BaseActivity
 import com.example.App
+import com.example.ad.AdFactory
 import com.example.okHttpGet
 import com.example.vpn.databinding.ActivityLocationBinding
 import kotlinx.coroutines.Dispatchers
@@ -37,6 +38,12 @@ class LocationActivity : BaseActivity<ActivityLocationBinding>() {
         mBinding.map.loadUrl("https://www.google.com/maps")
     }
 
+    override fun onStart() {
+        super.onStart()
+        lifecycleScope.launch {
+            AdFactory.show(this@LocationActivity,"nav","report",mBinding.adContainer)
+        }
+    }
     override fun initData() {
         App.localBean.observe(this) {
             mBinding.textView12.text = it?.ip ?: "unKnown"
