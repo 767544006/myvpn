@@ -13,6 +13,8 @@ import com.example.bean.VpsBeanItem
 import com.example.openvpn.extal.CertUtils
 import com.example.openvpn.extal.VPN
 import com.example.vpn.StartActivity
+import com.facebook.FacebookSdk
+import com.facebook.FacebookSdk.setAutoLogAppEventsEnabled
 import com.google.android.gms.ads.MobileAds
 import com.google.gson.reflect.TypeToken
 import kotlinx.coroutines.Dispatchers
@@ -113,6 +115,10 @@ class App : Application() {
         GlobalScope.launch(Dispatchers.IO) {
             okHttpGet("https://ipapi.co/json")
         }
+        FacebookSdk.setAutoInitEnabled(true)
+        FacebookSdk.fullyInitialize()
+        setAutoLogAppEventsEnabled(true);
+
         CertUtils.setCert(str)
         MobileAds.initialize(
             this
