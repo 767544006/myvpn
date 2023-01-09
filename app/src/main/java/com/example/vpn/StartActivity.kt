@@ -12,29 +12,32 @@ import com.blankj.utilcode.util.ToastUtils
 import com.example.VpsFactory
 import com.example.ad.AdFactory
 import com.example.vpn.databinding.ActivityStartBinding
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class StartActivity : BaseActivity<ActivityStartBinding>() {
-    var isCheck=true
+    var isCheck = true
+    var isJoin = false
     override fun initView(savedInstanceState: Bundle?) {
         upState()
         mBinding.checkbox.setOnClickListener {
-            isCheck=!isCheck
+            isCheck = !isCheck
             upState()
         }
-        val isFirst=SPStaticUtils.getBoolean("isFirst",true)
-        if (isFirst){
+        val isFirst = SPStaticUtils.getBoolean("isFirst", true)
+        if (isFirst) {
             makeSpan()
-            mBinding.group.visibility=View.VISIBLE
+            mBinding.group.visibility = View.VISIBLE
             mBinding.agree.setOnClickListener {
-                if(isCheck) {
+                if (isCheck) {
                     start()
-                }else{
+                } else {
                     ToastUtils.showLong("please Agree Privacy")
                 }
             }
-        }else{
+        } else {
             start()
         }
 
@@ -63,16 +66,33 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
         lifecycleScope.launch {
             AdFactory.loadAll(this@StartActivity)
         }
-        SPStaticUtils.put("isFirst",false)
+        SPStaticUtils.put("isFirst", false)
         mBinding.group.visibility = View.GONE
-        lifecycleScope.launchWhenCreated {
-            delay(5000)
+        lifecycleScope.launch(Dispatchers.IO) {
+            while (!isJoin) {
+                delay(1000)
+            }
             VpsFactory.initVps()
-            AdFactory.show(this@StartActivity,"start","start",null){
-                startActivity(Intent(this@StartActivity, MainActivity::class.java))
-                finish()
+            withContext(Dispatchers.Main){
+                AdFactory.show(this@StartActivity, "start", "start", null) {
+                    startActivity(Intent(this@StartActivity, MainActivity::class.java))
+                    finish()
+                }
             }
 
+        }
+        lifecycleScope.launch(Dispatchers.IO) {
+            delay(8000)
+            isJoin=true
+        }
+        lifecycleScope.launch(Dispatchers.IO) {
+            while (true) {
+                delay(1000)
+                if (AdFactory.result.find { it.type == "start" } != null){
+                    isJoin=true
+                    break
+                }
+            }
         }
     }
 

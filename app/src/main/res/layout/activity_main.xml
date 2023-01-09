@@ -251,6 +251,15 @@
                 app:layout_constraintStart_toEndOf="@+id/textView6"
                 app:layout_constraintTop_toTopOf="@+id/textView6" />
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <FrameLayout
+            android:id="@+id/adContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_editor_absoluteX="15dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
     <include
         android:id="@+id/left_drawer"

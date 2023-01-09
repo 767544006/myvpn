@@ -13,10 +13,9 @@ object AdFactory {
         AdBean("ca-app-pub-3940256099942544/1033173712", "finish", "int"),
         AdBean("ca-app-pub-3940256099942544/2247696110", "report", "nav"),
     )
-    private val result = mutableListOf<AdResult>()
+    val result = mutableListOf<AdResult>()
     private val loadingPlace= mutableListOf<String>()
-    private
-    val adapterList = listOf(
+    private val adapterList = listOf(
         AdmobOpen(), AdmobInsert(), AdmobBan(), AdmobNative()
     ).associateBy {
         it.type
